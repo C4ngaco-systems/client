@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+// Componente React
 const Footer = () => {
   const year = new Date().getFullYear();
   return (
@@ -12,7 +12,7 @@ const Footer = () => {
 };
 
 export default Footer;
-
+// Estilização com styled-components
 const StyledFooter = styled.footer`
   font-size: .8em;
   width: 100%;

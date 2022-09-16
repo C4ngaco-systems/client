@@ -1,12 +1,13 @@
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-
+// Componente React
 const Navbar = () => {
+  // Hook para navegação
   const navigate = useNavigate();
   return (
     <NavStyled className="navbar">
       <div className="container">
-        <div className="logo-wrapper" onClick={() => navigate('/home')}>
+        <div className="logo-wrapper" onClick={() => navigate("/home")}>
           <img src="/images/logo-taci-menor.png" alt="company logo" />
         </div>
         <div>hambuquer ---</div>
@@ -14,7 +15,7 @@ const Navbar = () => {
     </NavStyled>
   );
 };
-
+// Estilização com styled-components
 const NavStyled = styled.nav`
   box-shadow: 0px 0 0.75em 0.25em rgba(235, 143, 169, 0.2);
   height: 60px;

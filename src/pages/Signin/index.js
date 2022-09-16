@@ -5,10 +5,13 @@ import styled from "styled-components";
 import AuthForm from "../../components/AuthForm";
 import Footer from "../../components/Footer";
 
+// Componente React
 const Signin = () => {
-  const [error, setError] = useState(null);
+  // Hook para navegação
   const navigate = useNavigate();
-
+  // Estado para gerenciar erros de login
+  const [error, setError] = useState(null);
+  // Função para fazer login -> recebe email e senha como parâmetro e retorna um token
   const handleLogin = async (email, password, module) => {
     console.log(email, password, module);
     try {
@@ -22,6 +25,7 @@ const Signin = () => {
       });
       const { accessToken } = await response.json();
       const data = jwtDecode(accessToken);
+      // Se o token for válido, armazena no localStorage e redireciona para a página inicial
       localStorage.setItem("accessToken", accessToken);
       localStorage.setItem("firstName", data.dataValues.firstName);
       navigate("/home");
@@ -52,7 +56,7 @@ const Signin = () => {
 };
 
 export default Signin;
-
+// Estilização com styled-components
 const PageContainer = styled.div`
   height: 100%;
   display: flex;
@@ -85,12 +89,3 @@ const PageContainer = styled.div`
     }
   }
 `;
-
-// #wrapper-login {
-//     width: 100%;
-//     max-width: 400px;
-//     margin: 3% auto;
-//     padding: 0 1rem;
-//     background-color: var(--cor-background-clara);
-//     border-radius: 10px;
-// }

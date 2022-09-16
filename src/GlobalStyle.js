@@ -1,5 +1,5 @@
 import { createGlobalStyle, ThemeProvider } from "styled-components";
-
+// Tema global aplicado com ThemeProvider accessível em todo o projeto
 const theme = {
   colors: {
     white: "#fff",
@@ -20,7 +20,7 @@ const theme = {
     main: "calc((100vw - 1000px)/2)",
   },
 };
-
+// Estilização global com styled-components
 const GlobalStyle = createGlobalStyle`
 *,
 ::before,

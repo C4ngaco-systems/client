@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { useState } from "react";
-
+// Cpomponente React para o formulário de autenticação
 const AuthForm = ({
   onSubmitForm,
   onSubmitButtonText,
@@ -8,10 +8,14 @@ const AuthForm = ({
   onRouteLink,
   error,
 }) => {
+  // Estado para armazenar o email
   const [email, setEmail] = useState("");
+  // Estado para armazenar a senha
   const [password, setPassword] = useState("");
+  // Estado para armazenar o módulo
   const [module, setModule] = useState("");
 
+  // Função para lidar com o submit do formulário
   const handleSubmit = async (e) => {
     e.preventDefault();
     onSubmitForm(email, password, module);
@@ -56,7 +60,7 @@ const AuthForm = ({
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        {error && <h4 style={{color: 'red'}}>{error}</h4>}
+        {error && <h4 style={{ color: "red" }}>{error}</h4>}
         {/* <div
           className="g-recaptcha"
           data-sitekey="6LehaJ4dAAAAAOZBnu8mvcPJOj71NFyEJDW55_P0"
@@ -67,7 +71,7 @@ const AuthForm = ({
     </Container>
   );
 };
-
+// Estilização do componente
 const Container = styled.div`
   width: 100%;
   form {

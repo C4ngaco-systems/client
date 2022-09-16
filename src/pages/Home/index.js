@@ -3,13 +3,17 @@ import styled from "styled-components";
 import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar";
 import StoreCard from "../../components/StoreCard";
-
+// Componente React
 const Home = () => {
+  // Pegando token de acesso do localStorage
   const accessToken = localStorage.getItem("accessToken");
+  // Estado para armazenar as lojas
   const [stores, setStores] = useState([]);
+  // Estado para carregamento
   const [isLoading, setIsLoading] = useState(true);
+  // Estado para gerenciar a pesquisa de lojas
   const [searchParam, setSearchParam] = useState("");
-
+  // Effect para pegar as lojas
   useEffect(() => {
     let url = "";
     if (searchParam) {
@@ -54,7 +58,12 @@ const Home = () => {
         {stores.length > 0 && (
           <div className="stores">
             {stores.map((store) => (
-              <StoreCard key={store.id} name={store.name} createdAt={store.createdAt} id={store.id}/>
+              <StoreCard
+                key={store.id}
+                name={store.name}
+                createdAt={store.createdAt}
+                id={store.id}
+              />
             ))}
           </div>
         )}
@@ -66,6 +75,7 @@ const Home = () => {
 };
 export default Home;
 
+// Estilização com styled-components
 const Container = styled.div`
   height: 100%;
   display: flex;

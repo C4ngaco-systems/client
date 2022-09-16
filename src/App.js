@@ -3,12 +3,13 @@ import { GlobalStyle, ThemeProvider, theme } from "./GlobalStyle";
 import Signin from "./pages/Signin";
 import Home from "./pages/Home";
 import StoreDetails from "./pages/StoreDetails";
-
+// Componente React principal
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <div className="App">
+        {/* Rotas da aplicação */}
         <Routes>
           <Route path="/" element={<Signin />} />
           <Route path="/home" element={<Home />} />
@@ -20,7 +21,3 @@ function App() {
 }
 
 export default App;
-
-// const AppStyle = {
-//   margin: ' 0 calc((100vw - 1000px)/2)',
-// }

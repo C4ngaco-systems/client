@@ -1,15 +1,21 @@
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
+// Componente React
 const StoreCard = ({ name, createdAt, id }) => {
+  // Hook para navegação
   const navigate = useNavigate();
+  // Formatação da data
   const date = new Date(createdAt);
   const formattedDate = `${date.getMonth()}/${date
     .getFullYear()
     .toString()
     .slice(-2)}`;
   return (
-    <CardContainer className="store-card" onClick={() => navigate(`/stores/${id}`)}>
+    <CardContainer
+      className="store-card"
+      onClick={() => navigate(`/stores/${id}`)}
+    >
       <div className="img-wrapper">
         <img src="https://via.placeholder.com/100/FFD7F0/000000" alt="" />
       </div>
@@ -32,6 +38,7 @@ const StoreCard = ({ name, createdAt, id }) => {
 
 export default StoreCard;
 
+// Estilização com styled-components
 const CardContainer = styled.div`
   align-items: center;
   background-color: ${({ theme }) => theme.colors.white};
