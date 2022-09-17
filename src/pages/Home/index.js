@@ -112,7 +112,7 @@ const Container = styled.div`
       font-size: 1.1em;
       border-radius: 50px;
       text-indent: 2.2em;
-      background-image: url("images/magnifying-glass-solid.svg");
+      background-image: url("/images/magnifying-glass-solid.svg");
       background-repeat: no-repeat;
       background-position: 0.6em center;
       background-size: 1.1em;
