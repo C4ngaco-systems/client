@@ -1,6 +1,6 @@
 # React Client for the mundo taci project
 
-> Client fronend desenvolvido em ReactJs para o projeto mundo taci, consome api do mundo taci.
+> Client frontend desenvolvido em ReactJs para o projeto mundo taci, consome api do mundo taci.
 
 ### Ajustes e melhorias
 
